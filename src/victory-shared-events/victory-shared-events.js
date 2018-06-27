@@ -1,5 +1,6 @@
 import { assign, isFunction, partialRight, defaults } from "lodash";
-import React, { PropTypes } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import { PropTypes as CustomPropTypes, Events } from "../victory-util/index";
 
 export default class VictorySharedEvents extends React.Component {
@@ -11,16 +12,16 @@ export default class VictorySharedEvents extends React.Component {
     /**
      * VictoryEvents is a wrapper component that coordinates events between child components,
      */
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.arrayOf(React.PropTypes.node),
-      React.PropTypes.node
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
     ]),
     /**
      * The container prop specifies a container for the children to be rendered into.
      * If no container is provided, a <g> tag will be used. Shared parent events will only
      * be attached when a container prop is provided.
      */
-    container: React.PropTypes.node,
+    container: PropTypes.node,
     /**
      * The event prop take an array of event objects. Event objects are composed of
      * a childName, target, eventKey, and eventHandlers. Targets may be any valid style namespace

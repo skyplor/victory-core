@@ -2,12 +2,13 @@
  * Client tests
  */
 import React from "react";
+import PropTypes from "prop-types";
 import { mount } from "enzyme";
 import VictoryTransition from "src/victory-transition/victory-transition";
 
 const TestComponent = React.createClass({
   propTypes: {
-    message: React.PropTypes.array
+    message: PropTypes.array
   },
 
   render() {

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import VictoryAnimation from "../victory-animation/victory-animation";
 import { Transitions, Collection } from "../victory-util/index";
 import { defaults, isFunction, pick, filter, identity } from "lodash";
@@ -11,16 +12,16 @@ export default class VictoryTransition extends React.Component {
      * The animate prop specifies an animation config for the transition.
      * This prop should be given as an object.
      */
-    animate: React.PropTypes.object,
+    animate: PropTypes.object,
     /**
      * VictoryTransition animates a single child component
      */
-    children: React.PropTypes.node,
+    children: PropTypes.node,
     /**
      * This prop specifies which of the child's props are safe to interpolate.
      * This props should be given as an array.
      */
-    animationWhitelist: React.PropTypes.array
+    animationWhitelist: PropTypes.array
   };
 
   constructor(props) {

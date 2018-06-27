@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import d3Ease from "d3-ease";
 import d3Interpolate from "d3-interpolate";
 import { timer } from "d3-timer";
@@ -15,15 +16,15 @@ export default class VictoryAnimation extends React.Component {
      * The child of should be a function that takes an object of tweened values
      * and returns a component to render.
      */
-    children: React.PropTypes.func,
+    children: PropTypes.func,
     /**
      * The number of milliseconds the animation should take to complete.
      */
-    duration: React.PropTypes.number,
+    duration: PropTypes.number,
     /**
      * The easing prop specifies an easing function name to use for tweening.
      */
-    easing: React.PropTypes.oneOf([
+    easing: PropTypes.oneOf([
       "back", "backIn", "backOut", "backInOut",
       "bounce", "bounceIn", "bounceOut", "bounceInOut",
       "circle", "circleIn", "circleOut", "circleInOut",
@@ -40,21 +41,21 @@ export default class VictoryAnimation extends React.Component {
      * begins. If multiple values are in the animation queue, it is the delay
      * between each animation.
      */
-    delay: React.PropTypes.number,
+    delay: PropTypes.number,
     /**
      * The onEnd prop specifies a function to run when the animation ends. If
      * multiple animations are in the queue, it is called after the last
      * animation.
      */
-    onEnd: React.PropTypes.func,
+    onEnd: PropTypes.func,
     /**
      * The data prop specifies the latest set of values to tween to. When this
      * prop changes, VictoryAnimation will begin animating from the current
      * value to the new value.
      */
-    data: React.PropTypes.oneOfType([
-      React.PropTypes.object,
-      React.PropTypes.array
+    data: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.array
     ])
   };
 
