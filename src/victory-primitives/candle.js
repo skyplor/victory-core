@@ -5,7 +5,7 @@ import { assign } from "lodash";
 
 export default class Candle extends React.Component {
   static propTypes = {
-    index: React.PropTypes.number,
+    index: PropTypes.number,
     x: PropTypes.number,
     y1: PropTypes.number,
     y2: PropTypes.number,

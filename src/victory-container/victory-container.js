@@ -41,9 +41,9 @@ export default class VictoryContainer extends React.Component {
      * If no children are provided, VictoryContainer will render an empty SVG.
      * Props from children are used to determine default style, height, and width.
      */
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.arrayOf(React.PropTypes.node),
-      React.PropTypes.node
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
     ]),
     /**
      * The title prop specifies the title to be applied to the SVG to assist

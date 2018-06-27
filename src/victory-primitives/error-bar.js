@@ -9,7 +9,7 @@ export default class ErrorBar extends React.Component {
   }
 
   static propTypes = {
-    index: React.PropTypes.number,
+    index: PropTypes.number,
     datum: PropTypes.object,
     events: PropTypes.object,
     scale: PropTypes.object,

@@ -11,6 +11,10 @@ export default class Slice extends React.Component {
     events: PropTypes.object
   };
 
+  constructor(props) {
+    super(props);
+  }
+
   renderSlice(props) {
     return (
       <path

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* global console */
 import { isFunction } from "lodash";
 import PropTypes from "prop-types";
@@ -109,7 +110,7 @@ export default {
    * Check that the value is a non-negative number.
    */
   nonNegative: makeChainable((props, propName, componentName, ...rest) => {
-    const error = PropTypes.number(props, propName, componentName, ...rest);
+    const error = PropTypes.checkPropTypes({testProp: PropTypes.number}, props, propName, componentName, ...rest);
     if (error) {
       return error;
     }
@@ -125,7 +126,7 @@ export default {
    * Check that the value is an integer.
    */
   integer: makeChainable((props, propName, componentName, ...rest) => {
-    const error = PropTypes.number(props, propName, componentName, ...rest);
+    const error = PropTypes.checkPropTypes({testProp: PropTypes.number}, props, propName, componentName, ...rest);
     if (error) {
       return error;
     }
@@ -141,7 +142,7 @@ export default {
    * Check that the value is greater than zero.
    */
   greaterThanZero: makeChainable((props, propName, componentName, ...rest) => {
-    const error = PropTypes.number(props, propName, componentName, ...rest);
+    const error = PropTypes.checkPropTypes({testProp: PropTypes.number}, props, propName, componentName, ...rest);
     if (error) {
       return error;
     }
@@ -157,7 +158,7 @@ export default {
    * Check that the value is an Array of two unique values.
    */
   domain: makeChainable((props, propName, componentName, ...rest) => {
-    const error = PropTypes.array(props, propName, componentName, ...rest);
+    const error = PropTypes.checkPropTypes({testProp: PropTypes.array}, props, propName, componentName, ...rest);
     if (error) {
       return error;
     }
@@ -195,7 +196,7 @@ export default {
    * Check that an array contains items of the same type.
    */
   homogeneousArray: makeChainable((props, propName, componentName, ...rest) => {
-    const error = PropTypes.array(props, propName, componentName, ...rest);
+    const error = PropTypes.checkPropTypes({testProp: PropTypes.array}, props, propName, componentName, ...rest);
     if (error) {
       return error;
     }
